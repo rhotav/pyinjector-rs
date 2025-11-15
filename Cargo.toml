@@ -3,7 +3,7 @@ name = "pyinjector-rs"
 version = "0.1.0"
 edition = "2021"
 description = "A Windows process injector written in Rust that injects and executes Python codes"
-authors = ["Utku (Rhotav) Corbaci <utku@rhotav.com>"]
+authors = ["Utku (Rhotav) Çorbacı <utku@rhotav.com>"]
 readme = "README.md"
 homepage = "https://github.com/rhotav/pyinjector-rs"
 
@@ -17,3 +17,11 @@ goblin = "0.9"
 
 [target.'cfg(windows)'.dependencies]
 windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_System_Threading", "Win32_System_Diagnostics_ToolHelp", "Win32_System_Memory", "Win32_System_LibraryLoader", "Win32_System_Diagnostics_Debug", "Win32_Security", "Win32_UI_WindowsAndMessaging"] }
+
+[profile.release]
+opt-level = 3
+debug = false
+panic = "unwind"
+lto = true
+codegen-units = 1
+strip = true
