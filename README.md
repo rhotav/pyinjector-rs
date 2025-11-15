@@ -66,3 +66,7 @@ Build for Windows:
 ```bash
 cargo build --release --target x86_64-pc-windows-gnu
 ```
+
+## Acknowledgements
+
+I would like to thank [Melih Kaan Yıldız](https://github.com/morph3) for giving me the idea for pyinjector.
